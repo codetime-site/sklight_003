@@ -1,0 +1,19 @@
+
+
+.template {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    gap: 10px;
+    height: 800px;
+    z-index: -1;
+    margin: auto;
+    padding: 25px 50px;
+
+}
+
+.template div {
+    background: #c74f8770;
+    color: #bbcad3;
+    text-align: center;
+    padding: 20px;
+}
