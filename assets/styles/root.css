@@ -1,0 +1,22 @@
+:root{
+    /* colors */
+    --clr_white: #ffffff;
+    --clr_dark: #000000;
+    --clr_primary:#39A9CE;
+    --clr_orange:#FF8718;
+    
+    /* fonts */
+    /* --fnt_head: */
+    
+    /* fonts size */
+    --fs_head: 4.06em; /*65px*/
+    --fs_head_2: 2.1875em;  /*35px*/
+    --fs_head_sub: 1.375em; /*22px*/
+    --fs_p: 1em;  /*16px*/
+    --fs_btn: 1.125em; /*18px*/
+    --fs_flag: .875em; /*14em*/
+
+    
+    /* size  */
+
+}

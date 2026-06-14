@@ -1,6 +1,8 @@
 
 
 .template {
+    position: absolute;
+    top: 0;
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     gap: 10px;
@@ -8,6 +10,7 @@
     z-index: -1;
     margin: auto;
     padding: 25px 50px;
+    /* pointer-events: none; */
 
 }
 

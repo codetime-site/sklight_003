@@ -1,0 +1,50 @@
+colors = {
+    white: #ffffff,
+    dark: #000000,
+    primary: #39A9CE,
+    orange: #FF8718
+}
+
+// Размеры шрифтов указаны на "em".
+font_size = {
+    header: 4.06,
+    header_2: 2.1875,    
+    header_sub: 1.375,
+    p: 1,
+    menu:1,
+    btn: 1.125, 
+    flag: .875, /* размер миниатюрных кнопок с флагом флагов и  */
+}
+
+// размеры блоков на "px"  
+sizes_blocks = {
+    globus:502,
+
+}
+
+// padding  
+pad = {
+    flag: 22,
+    btn: 20,
+}
+
+hextorgb(color)
+    join( ", ", red(color) green(color) blue(color) )
+  
+:root
+    colors
+    for name, value in colors
+        --clr_{name}: value
+        --clr_{name}_hex: hextorgb(value);
+
+    font_size
+    for name, value in font_size
+        --fs_{name}: (value)em
+    --rad_btn: 8px
+    --rad_btn2:50px
+
+    pad
+    for name, value in pad
+        --pad_{name}: (value)px
+
+// быстрый доступ 
