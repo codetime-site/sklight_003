@@ -1,8 +1,8 @@
 colors = {
-    white: #ffffff,
+    wht: #ffffff,
     dark: #000000,
     primary: #39A9CE,
-    orange: #FF8718
+    orang: #FF8718
 }
 
 // Размеры шрифтов указаны на "em".
@@ -47,4 +47,16 @@ hextorgb(color)
     for name, value in pad
         --pad_{name}: (value)px
 
-// быстрый доступ 
+// быстрый доступ mixins
+clr(name)
+    unquote( "var(--clr_" + name + ")" );
+
+fs(name){
+    unquote("var(--fs_" + name + ")")
+}
+
+.test
+    color: clr(orang)
+    font-size: fs(header)
+
+
