@@ -47,16 +47,12 @@ hextorgb(color)
     for name, value in pad
         --pad_{name}: (value)px
 
-// быстрый доступ mixins
+// быстрый доступ mixins 
 clr(name)
     unquote( "var(--clr_" + name + ")" );
 
-fs(name){
+fs(name)
     unquote("var(--fs_" + name + ")")
-}
 
-.test
-    color: clr(orang)
-    font-size: fs(header)
 
 

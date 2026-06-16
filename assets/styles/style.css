@@ -1,0 +1,201 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+:root {
+  --clr_wht: #fff;
+  --clr_wht_hex: '255, 255, 255';
+  --clr_dark: #000;
+  --clr_dark_hex: '0, 0, 0';
+  --clr_primary: #39a9ce;
+  --clr_primary_hex: '57, 169, 206';
+  --clr_orang: #ff8718;
+  --clr_orang_hex: '255, 135, 24';
+  --fs_header: 4.06em;
+  --fs_header_2: 2.1875em;
+  --fs_header_sub: 1.375em;
+  --fs_p: 1em;
+  --fs_menu: 1em;
+  --fs_btn: 1.125em;
+  --fs_flag: 0.875em;
+  --rad_btn: 8px;
+  --rad_btn2: 50px;
+  --pad_flag: 22px;
+  --pad_btn: 20px;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+}
+a:hover {
+  color: #d68c50;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  margin: 0 auto;
+  padding: 0;
+  height: auto;
+}
+header {
+  background-color: #130202;
+  color: #fff;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 32px;
+  border: 1px solid #f00;
+}
+.container {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.header__top,
+.header__btm {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid #f00;
+  padding: 15px 0;
+  align-items: center;
+  gap: 32px;
+}
+.header__logo {
+  max-width: 60px;
+}
+.header__logo img {
+  width: 100%;
+}
+.header__menu > .nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 32px;
+  border: 1px solid #f00;
+  padding: 15px;
+}
+/*# sourceMappingURL=style.css.map */

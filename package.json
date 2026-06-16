@@ -1,0 +1,14 @@
+{
+  "name": "sklight_new",
+  "version": "1.0.0",
+  "description": "go",
+  "main": "script.js",
+  "scripts": {
+    "dev": "stylus -w start.styl -o ../test/styles.css",
+    "run_maps": "stylus -w -m stylus/start.styl -o assets/styles/style.css",
+    "run": "stylus -w -d -c stylus/start.styl -o assets/styles/style.css"
+  },
+  "keywords": [],
+  "author": "halil aliyew,",
+  "license": "ISC"
+}
