@@ -1,11 +1,1 @@
-@import url("assets/styles/reset.css");
-/* @import url("assets/styles/for_temp.css"); */
-
-@import url("assets/styles/root.css");
-@import url("assets/styles/main.css");
-@import url("assets/styles/header.css");
-
-* {
-    box-sizing: border-box
-}
-
+@import "assets/styles/style.css"

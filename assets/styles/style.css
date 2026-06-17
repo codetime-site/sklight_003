@@ -128,6 +128,8 @@ table {
   --clr_dark_hex: '0, 0, 0';
   --clr_primary: #39a9ce;
   --clr_primary_hex: '57, 169, 206';
+  --clr_primary2: #07659f;
+  --clr_primary2_hex: '7, 101, 159';
   --clr_orang: #ff8718;
   --clr_orang_hex: '255, 135, 24';
   --fs_header: 4.06em;
@@ -140,7 +142,10 @@ table {
   --rad_btn: 8px;
   --rad_btn2: 50px;
   --pad_flag: 22px;
-  --pad_btn: 20px;
+  --pad_btn_top: 14px;
+  --pad_btn_left: 24px;
+  --size_b_globus: 502px;
+  --size_b_container: 1920px;
 }
 a {
   text-decoration: none;
@@ -148,6 +153,23 @@ a {
 }
 a:hover {
   color: #d68c50;
+}
+.btn {
+  padding: var(--pad_btn_top) var(--pad_btn_left);
+  background: var(--clr_primary);
+  color: var(--clr_wht);
+  border-radius: var(--rad_btn);
+  font-size: var(--fs_menu);
+  font-weight: bold;
+  border: none;
+}
+.btn:hover {
+  background: var(--clr_wht);
+  color: var(--clr_primary);
+}
+.container {
+  width: var(--size_b_container);
+  margin: 0 auto;
 }
 body {
   font-family: 'Arial', sans-serif;
@@ -169,11 +191,6 @@ header {
   align-content: center;
   gap: 32px;
   border: 1px solid #f00;
-}
-.container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
 }
 .header__top,
 .header__btm {
