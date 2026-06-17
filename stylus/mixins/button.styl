@@ -1,13 +1,14 @@
-btn( bg = clr(primary), clr = clr(wht) )
-    padding pad(btn_top) pad(btn_left)
+btn( bg = var(--clr_primary_hex), clr = var(--clr_wht_hex) )
+    font-size: var(--fs_menu)
+    font-weight: bold
+    border-radius: var(--rad_btn);
+    border: none
+    padding var(--pad_btn_top) var(--pad_btn_left)
     background: bg
     color clr
-    border-radius: var(--rad_btn);
-    font-size: fs(menu)
-    font-weight: bold
-    border: none
+    hover()
 
     &:hover
-        background: clr(wht)
-        color clr(primary)
+        background-color: var(--clr_wht_hex)
+        color var(--clr_primary2_hex)
         

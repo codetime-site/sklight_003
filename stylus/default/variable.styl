@@ -20,7 +20,7 @@ font_size = {
 // размеры блоков на "px"  
 sizes_blocks = {
     globus:502,
-    container:1920,
+    container:1920
 }
 
 // padding  
@@ -30,42 +30,52 @@ pad = {
     btn_left: 24,
 }
 
+
+
 hextorgb(color)
     join( ", ", red(color) green(color) blue(color) )
   
 :root
     colors
     for name, value in colors
-        --clr_{name} : value
-        --clr_{name}_hex: hextorgb(value);
+        --clr_{name}_hex:value
+        --clr_{name}: unquote( ( hextorgb(value) ) )
 
     font_size
     for name, value in font_size
-        --fs_{name} : (value)em
+        --fs_{name}:(value)em
     --rad_btn: 8px
     --rad_btn2:50px
 
     pad
     for name, value in pad
-        --pad_{name} : (value)px
+        --pad_{name}:(value)px
         
     sizes_blocks
     for name, value in sizes_blocks
-        --size_b_{name} : (value)px
+        --size_b_{name}:(value)px
+    
+    // durations
+    --durations_min: .3s
+    --durations_middle: .5s
+    --durations_long: 1s
+    --durations_max: 1.5s
 
-// быстрый доступ mixins 
-clr(name)
-    unquote( "var(--clr_" + name + ")" );
+// // быстрый доступ mixins 
+// clr(name)
+//     unquote( "var(--clr_" + name + ")" );
 
-pad(name)
-    unquote( "var(--pad_" + name + ")" );
+// pad(name)
+//     unquote( "var(--pad_" + name + ")" );
 
-fs(name)
-    unquote("var(--fs_" + name + ")")
+// fs(name)
+//     unquote("var(--fs_" + name + ")")
 
-// для блоков
-size_b(name)
-    unquote( "var(--size_b_" + name + ")" )
+// // для блоков
+// size_b(name)
+//     unquote( "var(--size_b_" + name + ")" )
 
+// multi(name)
+//     unquote( "var(--" + name + ")"  ) 
 
 

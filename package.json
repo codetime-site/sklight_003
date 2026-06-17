@@ -6,7 +6,8 @@
   "scripts": {
     "dev": "stylus -w start.styl -o ../test/styles.css",
     "run_maps": "stylus -w -m stylus/start.styl -o assets/styles/style.css",
-    "run": "stylus -w -d -c stylus/start.styl -o assets/styles/style.css"
+    "run": "stylus -w -d -c stylus/start.styl -o assets/styles/style.css",
+    "git_go": "git status && git add ."
   },
   "keywords": [],
   "author": "halil aliyew,",

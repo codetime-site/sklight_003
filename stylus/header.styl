@@ -17,14 +17,12 @@ header
     align-items center
     align-content center
     gap 32px
-    border 1px solid red
-    
+
 .header__top
 .header__btm
     display flex
     flex-direction row
     justify-content space-around
-    border 1px solid red
     padding 15px 0
     align-items center
     gap 32px
@@ -35,9 +33,43 @@ header
     img
         width 100%
 
-.header__menu > .nav-links
-    display flex
-    flex-direction row
-    gap 32px
-    border 1px solid red
-    padding 15px
+
+// .menu-item {
+//   transition: transform 0.2s ease; /* Плавный переход */
+// }
+
+// .menu-item:hover {
+//   transform: scale(1.05); /* Увеличивает элемент на 5% */
+// }
+
+
+.header__menu 
+    .nav_links
+        display flex
+        flex-direction row
+        gap 4px
+        max-height: 100%
+        li
+            padding 10px 2px
+            transition: all var(--durations_min) ease
+
+        li:hover
+            border 1px solid var(--clr_wht_hex)
+            border-radius: var(--rad_btn)
+            background-color: @css{ rgba(var(--clr_wht), 22%) }
+
+        
+        li > a
+            padding var( --pad_btn_top ) var( --pad_btn_left ) 
+            font-weight: bold
+            hover()
+        
+        li > a:hover
+            transform: scale(1.05)
+            transform: scale(110%)
+            font-size: 1.1em
+            color var(--clr_primary_hex)
+            // border 1px solid #520b0b
+
+
+
