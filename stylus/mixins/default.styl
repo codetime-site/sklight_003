@@ -1,0 +1,22 @@
+padding(top = 12, left = 14 )
+    padding: unquote( "var(--pad_pd"+ top +")" ) unquote( "var(--pad_pd"+ left +")" )
+
+color( name = wht )
+   color: unquote( "var(--clr_"+ name +")" )
+
+color_rgb( name = wht )
+   color: unquote( "var(--clr_"+ name +"_hex)" )
+
+bg_color( name = primary )
+    background-color: unquote( "var(--clr_"+ name +")" )
+
+bg_color_hex( name = primary )
+    background-color: unquote( "var(--clr_"+ name +"_hex)" )
+
+border-radius( name = btn )
+    border-radius: unquote( "var(--rad_"+ name +")" )
+
+font-size( name = p)
+    font-size: unquote( "var( --fs_"+ name +" )" )
+
+

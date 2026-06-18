@@ -13,24 +13,35 @@ font_size = {
     header_sub: 1.375,
     p: 1,
     menu:1,
-    btn: 1.125, 
+    btn: 1.125, /*18*/
     flag: .875, /* размер миниатюрных кнопок с флагом флагов и  */
 }
 
 // размеры блоков на "px"  
 sizes_blocks = {
     globus:502,
-    container:1920
+    container:1500
 }
 
 // padding  
 pad = {
-    flag: 22,
-    btn_top: 14,
-    btn_left: 24,
+    pd2: 2,
+    pd12: 12,
+    pd14: 14,
+    pd20: 20,
+    pd22: 22,
+    pd24: 24,
+    pd25: 25,
+    pd50: 50,
 }
 
-
+// durations 
+durations = {
+    min: .3
+    middle: .5
+    long: 1
+    max: 1.5
+}
 
 hextorgb(color)
     join( ", ", red(color) green(color) blue(color) )
@@ -44,8 +55,6 @@ hextorgb(color)
     font_size
     for name, value in font_size
         --fs_{name}:(value)em
-    --rad_btn: 8px
-    --rad_btn2:50px
 
     pad
     for name, value in pad
@@ -55,27 +64,31 @@ hextorgb(color)
     for name, value in sizes_blocks
         --size_b_{name}:(value)px
     
-    // durations
-    --durations_min: .3s
-    --durations_middle: .5s
-    --durations_long: 1s
-    --durations_max: 1.5s
-
-// // быстрый доступ mixins 
-// clr(name)
-//     unquote( "var(--clr_" + name + ")" );
-
-// pad(name)
-//     unquote( "var(--pad_" + name + ")" );
-
-// fs(name)
-//     unquote("var(--fs_" + name + ")")
-
-// // для блоков
-// size_b(name)
-//     unquote( "var(--size_b_" + name + ")" )
-
-// multi(name)
-//     unquote( "var(--" + name + ")"  ) 
+    durations
+    for name, value in durations
+        --durations_{name}:(value)s
+        
+    --rad_btn: 8px
+    --rad_btn2:50px
+    
 
 
+for name in colors
+    define( "$" + name, unquote("var(--clr_" + name + ")") )
+
+for name in pad
+    define( "$" + name, unquote("var(--pad_" + name + ")") )
+
+
+color_rgb( name = wht )
+   color: unquote( "var(--clr_"+ name +"_hex)" )
+
+
+
+.test
+    padding(25, 12)
+    color_rgb(wht)
+    // font-size(header)
+//     padding()
+//     color(wht)
+//     border-radius()
