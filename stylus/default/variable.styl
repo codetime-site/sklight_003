@@ -1,102 +1,81 @@
-colors = {
-    wht: #ffffff,
-    drk: #000000,
-    primary: #39A9CE,
-    primary2: #07659F,
-    orang: #FF8718
-}
+$variable = {
+    color: {
+        wht: #ffffff, 
+        drk:#000000, 
+        primary: #39A9CE, 
+        primary2: #07659F, 
+        orang: #FF8718
+    }
+    size: { 
+        padding: { 
+            top: { 
+                button_menu: 14, 
+                button_section: 20, 
+                button_flag: 8, 
+                section: 25,
+                def:2
+                
+            },
+            left: { 
+                button_menu: 22, 
+                button_section: 24, 
+                button_flag: 22, 
+                section: 50, 
 
-// Размеры шрифтов указаны на "em".
-font_size = {
-    header: 4.06,
-    header_3: 2.1875,    
-    header_sub: 1.375,
-    parag: 1,
-    menu:1,
-    btn: 1.125, /*18*/
-    flag: .875, /* размер миниатюрных кнопок с флагом флагов и  */
-}
-
-font_weight = 500, 700, 800, 900
-
-// размеры блоков на "px"  
-sizes_blocks = {
-    globus:502,
-    container:1500
-}
-
-// padding  
-pad = {
-    pd2: 2,
-    pd12: 12,
-    pd14: 14,
-    pd20: 20,
-    pd22: 22,
-    pd24: 24,
-    pd25: 25,
-    pd50: 50,
-}
-
-// durations 
-durations = {
-    min: .3
-    middle: .5
-    long: 1
-    max: 1.5
+            }
+        },
+        font: {
+            sizes: {  h1: 65,  h2: 34,  h3:22,  p:16,  btn: 18,  flag: 14 },
+            weight: { min: 500, middle: 700, bolder:800, bold:900 },
+        },
+        width:{ globus: 502, container: 1500 },
+        radius: { btn:8, globus: 50 }
+    }
+    duration: { min: .3,middle: .5, long: 1, max: 1.5 }
 }
 
 hextorgb(color)
     join( ", ", red(color) green(color) blue(color) )
   
+$colors = $variable.color;
+$size = $variable.size;
+$size_padding = $size.padding;
+$size_width = $size.width;
+$size_radius = $size.radius;
+$size_font = $size.font.sizes;
+$font_weight = $size.font.weight;
+$duration = $variable.duration;
+
 :root
-    colors
-    for name, value in colors
-        --clr_{name}_hex:value
-        --clr_{name}: unquote( ( hextorgb(value) ) )
+    $colors
+    for name, value in $colors
+        --color-{name}_hex:value
+        --color-{name}: unquote( ( hextorgb(value) ) )
 
-    font_size
-    for name, value in font_size
-        --fs_{name}:(value)em
+    $size_font
+    for name, value in $size_font
+        --font-size-{name}:(value / 16)em 
 
-    font_weight
-    for name in font_weight
-        --fw_{name}: name
+    $font_weight
+    for name, value in $font_weight
+        --font-weight-{name}: value
 
-    pad
-    for name, value in pad
-        --pad_{name}:(value)px
+    $size_padding
+    for main_name, cat  in $size_padding
+        for name, value in cat
+            --padding-{main_name}-{name}: (value)px
         
-    sizes_blocks
-    for name, value in sizes_blocks
-        --size_{name}:(value)px
+    $size_width
+    for name, value in $size_width
+        --width-{name}:(value)px
+
+    $size_radius
+    for name, value in $size_radius
+        --radius-{name}:(value)%
     
-    durations
-    for name, value in durations
-        --durations_{name}:(value)s
-        
-    --rad_btn: 8px
-    --rad_btn2:50px
-    --fw_bold:bold
-    --fw_500:500
-    --fw_800:800
+    $duration
+    for name, value in $duration
+        --duration-{name}:(value)s
 
-    
-for name in colors
-    define( "$" + name, unquote("var(--clr_" + name + ")") )
 
-for name in colors
-    define( "$" + name + "_hex", unquote("var(--clr_" + name + "_hex)") )
-
-for name in pad
-    define( "$" + name, unquote("var(--pad_" + name + ")") )
-
-.test
-    // color $wht
-    // bg_colosr(dark)
-    // colormx( drk )
-//     padding(25, 12)
-//     color_rgb(wht)
-    // font-size(header)
-//     padding()
-//     color(wht)
-//     border-radius()
+@import "variable-stylus.styl"

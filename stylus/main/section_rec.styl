@@ -1,11 +1,8 @@
 .sec_rec__block
-    display: grid
-    grid-template-columns: repeat(2, 1fr)
-    justify-content: center
-    align-items: stretch
-    align-content: center
-    place-items: center
-    column-gap: 5px
+    gridx(, 2)
+    gridalignx(, , stretch)
+    gridalignprox()
+    gridgapx(0, 5px)
     height: 680px
     border 1px solid $wht_hex 
  
@@ -16,8 +13,7 @@
 .sec_rec
 
     &__left
-        display: flex
-        flex-direction: column
+        flexx(column)
     
     &__title
         paddingmx(12, 2)

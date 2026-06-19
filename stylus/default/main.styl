@@ -8,41 +8,43 @@ html
 
 section
     border 1px solid $wht
-    padding: $pd25 $pd50
+    padding: varx(pd, s, top) varx(pd, s, left)
 
 .container
-    cont()
+    container()
 
 .sec_dark
-    background-color: var(--clr_drk_hex)
-    color: var(--clr_wht_hex)
+    background-color: colorx(drk)
+    color: colorx(wht)
 
 .sec_wht
-    background-color: var(--clr_wht_hex)
-    color var(--clr_drk_hex)
+    background-color: colorx(wht)
+    color: colorx(drk)
 
 header
     width 100%
 
 h2 
     font-family: Arial, Helvetica, sans-serif
-    font-sizemx(header)
-    font-weightmx(700)
+    font-sizemx(h2)
+    font-weightmx(middle)
+    padding: varx(pd, s) varx(pd, def)
+
 
 h3
-    font-sizemx(header_3)
+    font-sizemx(h3)
     font-weightmx(500)
 
 p
-    font-sizemx(parag)
+    font-sizemx(p)
     // line-height: 
 
 a
     text-decoration: none;
-    colormx(wht);
+    color colorx(wht);
 
 a:hover
-    color_hex(wht);
+    color colorx(wht);
 
 img 
     min-width: 300px

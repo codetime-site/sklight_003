@@ -1,0 +1,27 @@
+// определено переменный stylus достаточно написать $wht => var(--color-wht_hex)
+for name in $colors
+    define( "$" + name, unquote("var(--color-" + name + "_hex)") )
+
+for name in $colors
+    define( "$" + name + "_hex", unquote("var(--clr_" + name + "_hex)") )
+
+
+varx(cat, value = null, pd = top )
+    if cat == clr
+        return unquote( "var(--color-" + value + "_hex)") 
+
+    else if cat == clr_rgb
+        return unquote( "var(--color-" + value + ")") 
+
+    else if cat == pd     
+        pd = pd == top ? pd:left  
+
+        if value == bs
+            value = button_section
+        else if value == bm
+            value = button_menu
+        else if value == bf
+            value = button_flag
+        else if value == s
+            value = section
+        return unquote( "var(--padding-"+ pd +"-" + value + ")") 
