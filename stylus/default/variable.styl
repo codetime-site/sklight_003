@@ -1,6 +1,6 @@
 colors = {
     wht: #ffffff,
-    dark: #000000,
+    drk: #000000,
     primary: #39A9CE,
     primary2: #07659F,
     orang: #FF8718
@@ -9,13 +9,15 @@ colors = {
 // Размеры шрифтов указаны на "em".
 font_size = {
     header: 4.06,
-    header_2: 2.1875,    
+    header_3: 2.1875,    
     header_sub: 1.375,
-    p: 1,
+    parag: 1,
     menu:1,
     btn: 1.125, /*18*/
     flag: .875, /* размер миниатюрных кнопок с флагом флагов и  */
 }
+
+font_weight = 500, 700, 800, 900
 
 // размеры блоков на "px"  
 sizes_blocks = {
@@ -56,13 +58,17 @@ hextorgb(color)
     for name, value in font_size
         --fs_{name}:(value)em
 
+    font_weight
+    for name in font_weight
+        --fw_{name}: name
+
     pad
     for name, value in pad
         --pad_{name}:(value)px
         
     sizes_blocks
     for name, value in sizes_blocks
-        --size_b_{name}:(value)px
+        --size_{name}:(value)px
     
     durations
     for name, value in durations
@@ -70,24 +76,26 @@ hextorgb(color)
         
     --rad_btn: 8px
     --rad_btn2:50px
+    --fw_bold:bold
+    --fw_500:500
+    --fw_800:800
+
     
-
-
 for name in colors
     define( "$" + name, unquote("var(--clr_" + name + ")") )
+
+for name in colors
+    define( "$" + name + "_hex", unquote("var(--clr_" + name + "_hex)") )
 
 for name in pad
     define( "$" + name, unquote("var(--pad_" + name + ")") )
 
-
-color_rgb( name = wht )
-   color: unquote( "var(--clr_"+ name +"_hex)" )
-
-
-
 .test
-    padding(25, 12)
-    color_rgb(wht)
+    // color $wht
+    // bg_colosr(dark)
+    // colormx( drk )
+//     padding(25, 12)
+//     color_rgb(wht)
     // font-size(header)
 //     padding()
 //     color(wht)

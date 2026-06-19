@@ -1,22 +1,40 @@
-padding(top = 12, left = 14 )
+// padding _mixins 
+paddingmx(top = 12, left = 14 )
     padding: unquote( "var(--pad_pd"+ top +")" ) unquote( "var(--pad_pd"+ left +")" )
+// padding end
 
-color( name = wht )
-   color: unquote( "var(--clr_"+ name +")" )
-
-color_rgb( name = wht )
+// color_mixins 
+// colormx(wht) =>  color:var(--clr_wht_hex) => #ffffff
+colormx( name = wht )
    color: unquote( "var(--clr_"+ name +"_hex)" )
 
+color_rgb( name = wht, n = 50%)
+   color: @css{ unquote( "rgba(var(--clr_"+ name +")", + n + " )" ) }
+
 bg_color( name = primary )
-    background-color: unquote( "var(--clr_"+ name +")" )
+    background-color: unquote( "var(--clr_" + name +"_hex)" )
 
-bg_color_hex( name = primary )
-    background-color: unquote( "var(--clr_"+ name +"_hex)" )
+bg_color_rgb( name = primary, n = 50% )
+    background-color: @css{ unquote( "rgba(var(--clr_"+ name +")", + n + " )" ) }
+// color end#
 
-border-radius( name = btn )
+// border 
+border-radiusmx( name = btn )
     border-radius: unquote( "var(--rad_"+ name +")" )
+// border_end
 
-font-size( name = p)
-    font-size: unquote( "var( --fs_"+ name +" )" )
+// font 
+font-sizemx( name = parag)
+    font-size: unquote( "var( --fs_"+ name + " )" )
 
+font-weightmx( name = 800)
+    font-weight: unquote( "var( --fw_"+ name +" )" )
+// font_end 
 
+// width 
+widthmx(name) 
+    width: unquote( "var( --size_"+ name +" )" )
+
+max-widthmx(name) 
+    max-width: unquote( "var( --size_" + name +")" )
+// width_end

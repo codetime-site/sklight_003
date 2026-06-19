@@ -1,49 +1,55 @@
-
 .sec_rec__block
     display: grid
     grid-template-columns: repeat(2, 1fr)
     justify-content: center
-    align-items: center
+    align-items: stretch
     align-content: center
-    // place-items: center
+    place-items: center
     column-gap: 5px
-   
+    height: 680px
+    border 1px solid $wht_hex 
  
     & > div 
-        border 1px solid $primary2
-        background-color: red
+        border 1px solid $wht_hex
+        bg_color(drk)
 
 .sec_rec
 
     &__left
         display: flex
         flex-direction: column
-
-    &__
     
     &__title
-        padding: $pd12 $pd2
+        paddingmx(12, 2)
+
+        & > h2 
+            colormx(primary)
 
     &__subtitle
         padding: $pd12 $pd2
+        line-height: 48px
 
     &__p > p
         padding: $pd12 $pd2
+        line-height: 28px
 
     &__button
         width: 100%
-        padding: 
+        paddingmx( 14, 2)
         // border 1px solid #000
 
     &__button >.btn
         margin: 0 auto
         text-align: center
 
-
-
-
-
-
-
+    &__right
+        border 1px solid $wht
+    
 .img__frame
     width 500px
+    height: 500px
+    margin: 0 auto
+
+.img__frame > img 
+    object-fit: fill
+    

@@ -1,21 +1,10 @@
-html {
+html 
   box-sizing: border-box;
-}
 
-*, *::before, *::after {
+
+*, *::before, *::after 
   box-sizing: inherit;
-}
-a{
-    text-decoration: none;
-    color: white;
-}
-a:hover{
-    color: #d68c50;
-}
 
-img 
-    width: 100%
-    height: auto
 
 section
     border 1px solid $wht
@@ -24,24 +13,52 @@ section
 .container
     cont()
 
-
-
 .sec_dark
-    background-color: var(--clr_dark_hex)
+    background-color: var(--clr_drk_hex)
     color: var(--clr_wht_hex)
 
 .sec_wht
     background-color: var(--clr_wht_hex)
-    color var(--clr_dark_hex)
-
+    color var(--clr_drk_hex)
 
 header
     width 100%
 
+h2 
+    font-family: Arial, Helvetica, sans-serif
+    font-sizemx(header)
+    font-weightmx(700)
 
+h3
+    font-sizemx(header_3)
+    font-weightmx(500)
+
+p
+    font-sizemx(parag)
+    // line-height: 
+
+a
+    text-decoration: none;
+    colormx(wht);
+
+a:hover
+    color_hex(wht);
+
+img 
+    min-width: 300px
+    width: 100%
+    max-width 652px
+    min-height: 220px 
+    height: @width
+    max-height: 700px
 
 .btn
     btn()
+
+// font-size
+
+
+
 
 
 
