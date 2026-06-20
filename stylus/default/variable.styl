@@ -79,3 +79,10 @@ $duration = $variable.duration;
 
 
 @import "variable-stylus.styl"
+
+
+border-radiusmx( name1 = btn )   
+    border-radius: unquote( "var(--radius-"+ name1 +")" )
+
+.test
+    border-radiusmx(btn)

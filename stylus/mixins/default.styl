@@ -1,6 +1,15 @@
+paddingx(name = bs, t = top)
+    varx( pd, name, t )
+
+pdx(name = bs, t = top)
+    paddingx(name, t)
 
 // color_mixins 
 // colormx(wht) =>  color:var(--color-wht_hex) => #ffffff
+clrx(name, cat = clr )
+    cat = cat == clr ? clr: clr_rgb
+    varx(cat, name)
+
 colormx( name = wht )
    color: unquote( "var(--color-"+ name +"_hex)" )
 
@@ -21,8 +30,8 @@ color_rgbx( name = wht, n = 50%)
 // color end#
 
 // border 
-border-radiusmx( name = btn )
-    border-radius: unquote( "var(--radius-"+ name +")" )
+border-radiusmx( name1 = btn )   
+    border-radius: unquote( "var(--radius-"+ name1 +")" )
 // border_end
 
 // font 

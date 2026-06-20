@@ -2,10 +2,6 @@
 for name in $colors
     define( "$" + name, unquote("var(--color-" + name + "_hex)") )
 
-for name in $colors
-    define( "$" + name + "_hex", unquote("var(--clr_" + name + "_hex)") )
-
-
 varx(cat, value = null, pd = top )
     if cat == clr
         return unquote( "var(--color-" + value + "_hex)") 
