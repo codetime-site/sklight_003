@@ -4,14 +4,17 @@ paddingx(name = bs, t = top)
 pdx(name = bs, t = top)
     paddingx(name, t)
 
+pdtx(name)
+    pdx(name, top)
+
+pdlx(name)
+    pdx(name, left)
+
 // color_mixins 
 // colormx(wht) =>  color:var(--color-wht_hex) => #ffffff
 clrx(name, cat = clr )
     cat = cat == clr ? clr: clr_rgb
     varx(cat, name)
-
-colormx( name = wht )
-   color: unquote( "var(--color-"+ name +"_hex)" )
 
 colorrgbmx( name = wht, n = 50%)
    color: @css{ unquote( "rgba(var(--color-"+ name +")", + n + " )" ) }
@@ -25,30 +28,48 @@ bgcrgbmx( name = primary, n = 50% )
 colorx( name = wht )
    return unquote( "var(--color-"+ name +"_hex)" )
 
+colormx( name = wht )
+   color: colorx( name )
+
 color_rgbx( name = wht, n = 50%)
    return @css{ unquote( "rgba(var(--color-"+ name +")", + n + " )" ) }
-// color end#
+//  color end 
 
-// border 
-border-radiusmx( name1 = btn )   
-    border-radius: unquote( "var(--radius-"+ name1 +")" )
-// border_end
+font-sizex( name = p)
+    return unquote( "var( --font-size-"+ name + " )" )
 
-// font 
+fsx( name = p)
+    font-sizex(name) 
+
+fsmx( name = p)
+    font-size: font-sizex(name) 
+
 font-sizemx( name = p)
-    font-size: unquote( "var( --font-size-"+ name + " )" )
+    fsmx( name )
+
+font-weightx( name = bold)
+    return unquote( "var( --font-weight-"+ name +" )" )
+
+fwx( name = bold)
+    font-weightx( name )
 
 font-weightmx( name = bolder)
-    font-weight: unquote( "var( --font-weight-"+ name +" )" )
+    font-weight: font-weightx( name ) 
+
+fwmx( name = bolder)
+    font-weightmx(name) 
 // font_end 
 
 // width 
-widthmx(name) 
-    width: unquote( "var( --width-"+ name +" )" )
-
 widthx(name) 
-    return unquote( "var( --width-"+ name +" )" )
+    return unquote( "var( --width-" + name + ")" )
+
+widthmx(name) 
+    width: widthx( name )
 
 max-widthmx(name) 
-    max-width: unquote( "var(--width-" + name +")" )
+    max-width: widthx( name )
 // width_end
+
+rad(name)
+    varx(rad, name);

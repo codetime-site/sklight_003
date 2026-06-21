@@ -25,11 +25,11 @@ $variable = {
             }
         },
         font: {
-            sizes: {  h1: 65,  h2: 34,  h3:22,  p:16,  btn: 18,  flag: 14 },
-            weight: { min: 500, middle: 700, bolder:800, bold:900 },
+            sizes: {  pwr:90, h1: 65,  h2: 34,  h3:22,  p:16,  btn: 18,  flag: 14 },
+            weight: { min: 500, middle: 700, bolder:800, bold:900, pwr:bolder },
         },
         width:{ globus: 502, container: 1500 },
-        radius: { btn:8, globus: 50 }
+        radius: { btn:8, globus: 50, pwr:25 }
     }
     duration: { min: .3,middle: .5, long: 1, max: 1.5 }
 }
@@ -71,7 +71,7 @@ $duration = $variable.duration;
 
     $size_radius
     for name, value in $size_radius
-        --radius-{name}:(value)%
+        --radius-{name}:(value)px
     
     $duration
     for name, value in $duration

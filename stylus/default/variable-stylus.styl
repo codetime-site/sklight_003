@@ -9,6 +9,9 @@ varx(cat, value = null, pd = top )
     else if cat == clr_rgb
         return unquote( "var(--color-" + value + ")") 
 
+    else if cat == rad
+        return unquote( "var(--radius-" + value + ")") 
+
     else if cat == pd     
         pd = pd == top ? pd:left  
 
