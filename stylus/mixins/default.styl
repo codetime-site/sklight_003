@@ -4,15 +4,15 @@ paddingx(name = bs, t = top)
 pdx(name = bs, t = top)
     paddingx(name, t)
 
-pdtx(name)
+pdtx(name = def)
     pdx(name, top)
 
-pdlx(name)
+pdlx(name = def)
     pdx(name, left)
 
 // color_mixins 
 // colormx(wht) =>  color:var(--color-wht_hex) => #ffffff
-clrx(name, cat = clr )
+clrx(name = wht, cat = clr )
     cat = cat == clr ? clr: clr_rgb
     varx(cat, name)
 
@@ -36,10 +36,11 @@ color_rgbx( name = wht, n = 50%)
 //  color end 
 
 font-sizex( name = p)
-    return unquote( "var( --font-size-"+ name + " )" )
+    return unquote( "var( --font-size-" + name + ")" );
+    // var( --font-size-btn(bg, clr, pdt, pdl) )
 
 fsx( name = p)
-    font-sizex(name) 
+    font-sizex( name ) 
 
 fsmx( name = p)
     font-size: font-sizex(name) 
@@ -56,8 +57,6 @@ fwx( name = bold)
 font-weightmx( name = bolder)
     font-weight: font-weightx( name ) 
 
-fwmx( name = bolder)
-    font-weightmx(name) 
 // font_end 
 
 // width 
@@ -71,5 +70,5 @@ max-widthmx(name)
     max-width: widthx( name )
 // width_end
 
-rad(name)
+radx(name)
     varx(rad, name);

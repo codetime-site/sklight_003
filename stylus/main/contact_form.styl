@@ -1,0 +1,111 @@
+// грубый верстка  
+
+.sec_contact__block
+    flexx(column)
+    flexgapx(pdlx(s))
+// //     flexalignx()
+//     border 1px solid #000
+//     &  div
+//         border 1px solid #000
+
+// base flex
+.sec_contact__block .contact, .contact__phone, .contact__social
+    flexx()
+
+.contact__social > .icon
+    flexx(row, wrap)
+// base align
+// base gap
+.contact__phone, .contact__social
+    flexgapx(15px)
+    flexalignx(start)
+
+.sec_contact__top > .sec_contact__left
+    flexx(column)
+    flexgapx(25px)
+    
+
+.contact
+    flexgapx( pdtx(s) ) 
+    h3 
+        font-size: fsx(h2)
+        font-style: italic
+        font-weight: fwx(middle)
+    & > div
+        flex 1
+        border-radius: radx(pwr)
+
+    & a  
+        display: block
+        line-height: 1.5em
+
+    & .icon
+        background-color: clrx(primary)
+        width 124px
+        height: 163px
+        padding: 25px 
+        border-radius: radx(pwr)
+        position relative
+        // text-align: center 
+
+    & i  
+        margin:  0 auto
+        text-align: center 
+  
+.contact__phone .icon > i
+    font-size: 36px
+    position: absolute
+    top:50%
+    transform: translateY(-50%)
+
+.faq
+    font-size: font-sizex(btn)
+    line-height: 1.5em
+    // padding: pdtx(bm)
+
+    &__quastion
+        padding: pdtx(bm)  
+        font-weight: fwx(middle)
+        flexx()
+        flexalignx(space-between)
+    
+        & span 
+            font-size: fsx(h2)
+            vertical-align: middle
+
+    
+    &__answer
+        padding: pdtx(bm) pdlx(bm) 
+        display: none
+
+.contact__btm
+    border-radius: radx(pwr)
+    padding: pdtx(s)
+
+    & p  
+        line-height: 1.5em
+        padding: pdtx( mb ) pdtx(def)
+    
+    .btn
+        border-radius: radx(globus)
+    
+.sec_contact__left
+    button
+        background-color: clrx(wht)
+        color clrx(primary)
+
+        & i 
+            padding: 6px
+            border 1px solid clrx(primary)
+            border-radius: radx(globus)
+            margin-left: 5px
+
+
+.sec_contact__left__btns
+    flexx()
+    flexalignx(space-between)
+    padding: pdtx(bm) 0
+
+.sec_contact__right.contact__btm
+    border 1px dashed clrx(primary)
+

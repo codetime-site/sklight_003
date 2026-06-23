@@ -21,12 +21,13 @@ $variable = {
                 button_section: 24, 
                 button_flag: 22, 
                 section: 50, 
+                def:2
 
             }
         },
         font: {
             sizes: {  pwr:90, h1: 65,  h2: 34,  h3:22,  p:16,  btn: 18,  flag: 14 },
-            weight: { min: 500, middle: 700, bolder:800, bold:900, pwr:bolder },
+            weight: { min: 500, middle: 700, bold:800, bolder:900, pwr:bolder },
         },
         width:{ globus: 502, container: 1500 },
         radius: { btn:8, globus: 50, pwr:25 }
@@ -78,11 +79,5 @@ $duration = $variable.duration;
         --duration-{name}:(value)s
 
 
-@import "variable-stylus.styl"
-
-
 border-radiusmx( name1 = btn )   
     border-radius: unquote( "var(--radius-"+ name1 +")" )
-
-.test
-    border-radiusmx(btn)

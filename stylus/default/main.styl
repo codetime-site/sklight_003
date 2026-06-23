@@ -11,7 +11,7 @@ section
     padding: varx(pd, s, top) varx(pd, s, left)
 
 .container
-    container()
+    containermx()
 
 .sec_dark
     background-color: colorx(drk)
@@ -34,6 +34,7 @@ h2
 h3
     font-sizemx(h3)
     font-weightmx(500)
+    padding: pdtx(bm) 0 
 
 p
     font-sizemx(p)
@@ -41,24 +42,34 @@ p
 
 a
     text-decoration: none;
-    color colorx(wht);
+    color inherit
+    font-size: fsx(btn)
 
 a:hover
-    color colorx(wht);
+    text-decoration: none
+    color inherit
 
 img 
-    min-width: 300px
+    // min-width: 100%
     width: 100%
-    max-width 652px
-    min-height: 220px 
+    // max-width 652px
+    // min-height: 220px 
     height: @width
-    max-height: 700px
+    // max-height: 700px
 
+
+strong 
+    font-weight: fwx(middle)
 .btn
-    btn()
+    btnmx()
 
 .clr_prim
     color: clrx(primary)
+
+.clrb_prim
+    background-color: clrx(primary)
+    color clrx(wht)
+
 
 // font-size
 

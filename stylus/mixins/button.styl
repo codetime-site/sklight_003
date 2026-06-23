@@ -1,14 +1,14 @@
-btn( bg = var(--clr_primary_hex), clr = var(--clr_wht_hex), pdt = $pd14, pdl = $pd24)
-    font-size: var(--fs_menu)
+btnmx( bg = clrx(primary), clr = clrx(wht), pdt = pdtx(bm), pdl = pdlx(bs) )
+    font-size: fsx(btn)
     font-weight: bold
-    border-radius: var(--rad_btn);
+    border-radius: radx(btn)
     border: none
-    padding  pdt pdl
-    background: bg
-    color clr
+    padding: pdt pdl
+    background-color: bg 
+    color: clr
     hover()
 
     &:hover
-        background-color: var(--clr_wht_hex)
-        color var(--clr_primary2_hex)
+        background-color: clrx()
+        color: clrx(primary)
         
