@@ -1,0 +1,88 @@
+.sec_servise__text
+    h2, h3, p
+        padding: 25px 0 
+    p  
+        font-size: fsx(btn)
+
+.sec_servise__block
+    gridx(2)
+    gridalignx()
+    place-content: center
+    place-items: center
+    gridgapx(60px)
+    padding: 15px
+    width 100%
+    margin-top: 50px
+
+.sec_servise__block .window
+    line-height: 1.8em
+    border 1px dashed clrx(primary)
+    border-radius: radx(pwr)
+    padding: pdlx(s)
+    // width 600px
+    transition: all .5s ease
+    
+    &:nth-child(3n+1)
+        background-color: clrx(primary)
+        color clrx(wht)
+    
+        &:hover
+            background: clrx(wht)
+            color clrx(drk)
+            transition: all .5s ease
+
+
+            & > button.btn
+                background: clrx(primary)
+                color clrx(wht)
+                transition: all .5s ease
+
+        & > button.btn
+            background: clrx(wht)
+            color clrx(primary)
+            transition: all .5s ease
+
+            &:hover
+                background-color: clrx(wht)
+                color clrx(primary)
+                border 1px dashed clrx(primary)
+    
+    &:not(:nth-child(3n+1)) 
+        &:hover
+            background-color: clrx(primary)
+            color clrx(wht)
+            transition: all .5s ease
+
+            & button.btn
+                background: clrx(wht)
+                color clrx(primary)
+                transition: all .5s ease
+                
+        & button.btn
+            background: clrx(primary)
+            transition: all .5s ease
+            
+            &:hover
+                // background: clrx(primary2)
+                color clrx(primary)
+                border 1px dashed clrx(primary2)
+
+
+
+.sec_servise__block .window 
+
+    h4, p, button 
+        padding 12px 0
+        margin: 12px 0
+
+    h4
+        font-size: fsx(h3)
+        font-weight: fwx(middle)
+        padding-left: 22px
+        text-indent: -25px
+    
+    .btn 
+        padding: 22px 30px
+        border-radius: 50px
+        width 100%
+
